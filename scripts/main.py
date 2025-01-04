@@ -1,11 +1,11 @@
 import RPi.GPIO as GPIO
-from mfrc522 import SimpleMFRC522
+import MFRC522
 from PIL import Image, ImageTk
 import tkinter as tk
 import csv
 
 # Configurar el lector RFID
-reader = SimpleMFRC522()
+reader = MFRC522()
 
 def buscar_asiento(id_tarjeta):
     with open('../data/asientos.csv', newline='', encoding='utf-8') as csvfile:
